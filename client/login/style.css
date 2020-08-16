@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    min-width: 180px;
+}
+
+/* mobile device style  -- start */
+
+.mobile-alert {
+    display: none;
+    position: fixed;
+    height: 2.5rem;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-align: center;
+    line-height: 2.5rem;
+    font-size: .4rem;
+}
+
+/* components  -- start  */
+#app {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s ease-in-out;
+}
+
+.container {
+    height: 22.5rem;
+    width: 16.25rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.container-title {
+    height: 2.5rem;
+    width: 100%;
+    line-height: 2.5rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+
+.input-container {
+    position: relative;
+    height: 15rem;
+    width: 100%;
+}
+
+.input-box {
+    margin: 2rem auto;
+    height: 2rem;
+    width: 95%;
+    position: relative;
+}
+.input-box input {
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    background-color: transparent;
+}
+
+.input-box span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.button {
+    margin: 3rem auto 0;
+    height: 2rem;
+    width: 12rem;
+    font-size: 16px;
+    border-radius: 5px;
+    line-height: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.switch {
+    margin: 1.25rem;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: .3rem;
+    text-align: center;
+}
+
+
+
+/* login style  -- start */
+.app-login {
+    background-color: #20232a;
+}
+.container-title-login {
+    color: #61dafb;
+}
+.login-input input{
+    caret-color: #61dafb;
+    color: #61dafb;
+    /* background-color: #20232a; */
+}
+.login-input input::placeholder {
+    color: #345158;
+}
+.login-background {
+    background-color: #61dafb;
+}
+.login-switch {
+    color: #3b8599;
+}
+/* login style  -- end */
+
+
+
+
+/* sign style  -- start */
+.app-sign {
+    background-color: white;
+}
+.container-title-sign {
+    color: #4fc08d;
+}
+.sign-input input {
+    caret-color: #4fc08d;
+    color: #4fc08d;
+    /* background-color: white; */
+}
+
+.sign-background {
+    background-color: #4fc08d;
+}
+.sign-switch {
+    color: #4fc08d;
+}
+/* sign style  -- end */
+
+
+
+
+
+/* mobile device style-- end */
+
+
+
+
+
+
+
+
+
+/* device alert  -- start */
+    @media screen and (min-width: 480px) {
+        #app {
+            display: none;
+        }
+
+        .mobile-alert {
+            display: block;
+        }
+    }
+/* device alert  -- end */

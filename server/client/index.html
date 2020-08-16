@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一剑</title>
+</head>
+<body>
+    
+
+
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        axios.interceptors.request.use(
+            config => {
+            if (localStorage.getItem("oneToken") != null) {
+                config.headers["authorization"] ='Bearer ' + localStorage.getItem("oneToken");
+            }
+        
+            return config;
+            },
+            err => Promise.reject(err)
+        );
+        axios.get('/api/user')
+        .then(res => {
+            console.log(res.data)
+            window.location.href = res.data;
+        })
+    </script>
+</body>
+</html>
