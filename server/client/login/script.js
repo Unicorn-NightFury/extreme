@@ -67,8 +67,10 @@ function handlePostData() {
             console.log(res.data);
             if (res.data === 'no user') {
                 console.error('no user')
-            } else {localStorage.setItem('oneToken', res.data);
-            window.location.href = '/'}  
+            } else {
+                localStorage.setItem('oneToken', res.data);
+                window.location.href = '/'
+            }  
             
         })
     } else if (!login) {

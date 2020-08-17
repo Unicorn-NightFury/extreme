@@ -4,6 +4,7 @@ const { createToken } = require('../jwt')
 const User = require('../mongo')
 
 router.get('/user', (req, res) => {
+    console.log(req.user)
     if (req.user !== undefined) {
         res.send('/user')
     } else {

@@ -4,8 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>一剑</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2012147_szeucfr9ymh.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div>user page</div>
+    
+    <div class="mobile-alert">
+        暂不支持平板、PC等大屏设备，请在手机移动端体验😎
+    </div>
+
+    <div id="app">
+        <!-- 头部 -->
+        <div class="header">
+            
+        </div>
+
+        <!-- 内容 -->
+        <div class="main">
+            <div class="main-box main-show" id="todo"></div>
+            <div class="main-box" id="competition"></div>
+            <div class="main-box" id="user"></div>
+        </div>
+
+        <!-- 底部导航 -->
+        <div class="footer">
+            <div class="footer-box">
+                <div class="footer-item">
+                    <i class="iconfont icon--Todo-List"></i>
+                </div>
+                <div class="footer-item">
+                    <span>待办</span>
+                </div>
+            </div>
+            <div class="footer-box">
+                <div class="footer-item">
+                    <i class="iconfont icon-competition"></i>
+                </div>
+                <div class="footer-item">
+                    <span>排名</span>
+                </div>
+            </div>
+            <div class="footer-box">
+                <div class="footer-item">
+                    <i class="iconfont icon-user"></i>
+                </div>
+                <div class="footer-item">
+                    <span>我的</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../flexible.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

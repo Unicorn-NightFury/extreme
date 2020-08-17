@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* structure components   -- start */
+
+.mobile-alert {
+    display: none;
+    position: fixed;
+    height: 2.5rem;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-align: center;
+    line-height: 2.5rem;
+    font-size: .4rem;
+}
+
+#app {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box; 
+    overflow: hidden;
+    background-color: pink;
+}
+
+
+/* header components    -- start */
+.header {
+    position: fixed;
+    height: 2.5rem;
+    width: 100%;
+    background-color: yellow;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+/* header components    -- end */
+
+/* main components     -- start */
+.main {
+    position: fixed;
+    top: 2.5rem;
+    bottom: 2.5rem;
+    width: 100%;
+    margin: auto;
+    background-color: black;
+    overflow: hidden;
+}
+.main-box {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+.main-show {
+    display: block !important;
+}
+/* main components     -- end */
+
+
+
+/* footer components    -- start */
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 2.5rem;
+    width: 100%;
+    background-color: #31c27c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-box {
+    height: 100%;
+    width: 20%;
+    margin: 1.25rem;
+}
+.footer-item {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.footer-item i {
+    font-size: 1.7rem;
+    color: white;
+}
+.footer-item span {
+    font-size: 0.4rem;
+    color: white;
+
+}
+
+/* footer components    -- end */
+
+
+/* structure components   -- end */
+
+
+
+
+/* todo components    -- start */
+#todo {
+    background-color: red;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+/* todo components    -- end */
+
+
+
+
+/* competion components    -- start */
+#competition {
+    background-color: violet;
+}
+/* competion components    -- end */
+
+
+/* user components    -- start */
+#user {
+    background-color: blue;
+}
+/* user components    -- end */
+
+
+
+/* device alert  -- start */
+@media screen and (min-width: 480px) {
+    #app {
+        display: none;
+    }
+
+    .mobile-alert {
+        display: block;
+    }
+}
+/* device alert  -- end */

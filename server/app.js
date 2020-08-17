@@ -32,6 +32,11 @@ var app = express();
 // })
 
 app.use(ejwt);
+app.use((err, req, res, next) => {
+  if (err.name === 'UnauthorizedError') {
+      res.send('/login')
+  }
+})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
