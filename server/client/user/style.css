@@ -23,13 +23,22 @@ html, body {
     font-size: .4rem;
 }
 
+#shadow-box {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .7);
+    z-index: 2;
+    display: none;
+}
+
 #app {
     height: 100%;
     width: 100%;
     position: relative;
     box-sizing: border-box; 
     overflow: hidden;
-    background-color: pink;
+    /* background-color: pink; */
 }
 
 
@@ -38,11 +47,63 @@ html, body {
     position: fixed;
     height: 2.5rem;
     width: 100%;
-    background-color: yellow;
+    background-color: #31c27c;
     top: 0;
     left: 0;
     z-index: 1000;
+    box-sizing: border-box;
+    overflow: hidden;
 }
+
+#avatar {
+    height: 2.2rem;
+    width: 2.2rem;
+    border-radius: 2.2rem;
+    position: relative;
+    margin-left: .7rem;
+    margin-top: .15rem;
+    background-color: white;
+    background-image: url('../img/zhi.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-content {
+    height: 100%;
+    width: 40%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    line-height: 2.5rem;
+    color: white;
+    font-weight: 100;
+    font-size: 0.675rem;
+}
+
+.header-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3rem;
+    /* background-color: pink; */
+}
+.header-nav-item {
+    position: relative;
+    color: white;
+    font-size: 0.75rem;
+    height: 100%;
+    width: 50%;
+    float: right;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
 /* header components    -- end */
 
 /* main components     -- start */
@@ -52,7 +113,7 @@ html, body {
     bottom: 2.5rem;
     width: 100%;
     margin: auto;
-    background-color: black;
+    /* background-color: black; */
     overflow: hidden;
 }
 .main-box {
@@ -64,6 +125,8 @@ html, body {
 .main-show {
     display: block !important;
 }
+
+
 /* main components     -- end */
 
 
@@ -74,10 +137,11 @@ html, body {
     bottom: 0;
     height: 2.5rem;
     width: 100%;
-    background-color: #31c27c;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .3);
 }
 .footer-box {
     height: 100%;
@@ -93,14 +157,16 @@ html, body {
 }
 .footer-item i {
     font-size: 1.7rem;
-    color: white;
+    color: #aaa;
 }
 .footer-item span {
     font-size: 0.4rem;
-    color: white;
+    color: #aaa;
 
 }
-
+.footer-active i, .footer-active span{
+    color: #31c27c !important;
+}
 /* footer components    -- end */
 
 
@@ -111,9 +177,86 @@ html, body {
 
 /* todo components    -- start */
 #todo {
-    background-color: red;
+    /* background-color: red; */
     overflow-y: scroll;
     overflow-x: hidden;
+}
+
+#todo-table {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -10%);
+    height: 15rem;
+    width: 15rem;
+    opacity: 0;
+    border-radius: 0.75rem;
+    background-color: white;
+    border: 0px solid rgba(0, 0, 0, .1);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, .25);
+    transition: .3s all ease-in-out;
+    z-index: 10000000 !important;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+.todo-table-show {
+    transform: translate(-50%, -50%) !important;
+    opacity: 1 !important;
+    z-index: 10000000 !important;
+
+}
+.todo-table-hide {
+    opacity: 0;
+    transform: translate(-50%, -10%);
+}
+
+.table-header {
+    position: relative;
+    height: 2.5rem;
+    width: 100%;
+    background-color: #31c27c;
+    box-shadow: 0px 0px 3px #31c27c;
+    border-top-right-radius: 0.75rem;
+    border-top-left-radius: 0.75rem;
+    text-align: center;
+    line-height: 2.5rem;
+    color: white;
+    font-size: 0.75rem;
+}
+#table-cancel {
+    height: 100%;
+    width: 2.5rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+
+.table-main {
+    height: 9rem;
+    width: 13rem;
+    margin: 0.5rem auto; 
+    /* background-color: black; */
+}
+.main-input-box {
+    height: 1.6rem;
+    width: 100%;
+    margin: 1rem auto;
+}
+#todo-name {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 0.5rem;
+    padding: 0 0.5rem;
+    color: #777;
+}
+#todo-name::placeholder {
+    color: #ccc;
 }
 /* todo components    -- end */
 

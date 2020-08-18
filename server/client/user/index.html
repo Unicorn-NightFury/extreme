@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>一剑</title>
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_2012147_szeucfr9ymh.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2012147_p3zm5j31p09.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -13,22 +13,55 @@
         暂不支持平板、PC等大屏设备，请在手机移动端体验😎
     </div>
 
+    
+
     <div id="app">
+        
         <!-- 头部 -->
         <div class="header">
-            
+            <div id="avatar">
+                <!--  -->
+            </div>
+
+            <div class="header-content">待办</div>
+
+            <div class="header-nav">
+                <div class="header-nav-item" id="addTodo">
+                    <i class="iconfont icon-tianjia"></i>
+                </div>
+                <div class="header-nav-item" id="moreAbout">
+                    <i class="iconfont icon-gengduo"></i>
+                </div>
+            </div>
+
         </div>
 
         <!-- 内容 -->
         <div class="main">
-            <div class="main-box main-show" id="todo"></div>
+            <div id="shadow-box"></div>
+            <div class="main-box main-show" id="todo">
+                <div id="todo-table">
+                    <div class="table-header">
+                        <span>添加待办</span>
+                        <div id="table-cancel">
+                            <i class="iconfont icon-cancel"></i>
+                        </div>
+                    </div>
+                    <div class="table-main">
+                        <div class="main-input-box">
+                            <input type="text" id="todo-name" placeholder="输入待办">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             <div class="main-box" id="competition"></div>
             <div class="main-box" id="user"></div>
         </div>
 
         <!-- 底部导航 -->
         <div class="footer">
-            <div class="footer-box">
+            <div class="footer-box footer-active">
                 <div class="footer-item">
                     <i class="iconfont icon--Todo-List"></i>
                 </div>
@@ -46,7 +79,7 @@
             </div>
             <div class="footer-box">
                 <div class="footer-item">
-                    <i class="iconfont icon-user"></i>
+                    <i class="iconfont icon-user1"></i>
                 </div>
                 <div class="footer-item">
                     <span>我的</span>
