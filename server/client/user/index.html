@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>一剑</title>
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_2012147_p3zm5j31p09.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2012147_pj6aec6cs0j.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -51,8 +51,34 @@
                         <div class="main-input-box">
                             <input type="text" id="todo-name" placeholder="输入待办">
                         </div>
-
+                        <div class="main-priority">
+                            <span>优先级：</span>
+                            <div class="main-priority-box">
+                                <i class="iconfont icon-gantanhao  first-priority"></i>
+                                <input type="radio" name="priority" value="1">
+                            </div>
+                            <div class="main-priority-box">
+                                <i class="iconfont icon-gantanhao  second-priority"></i>
+                                <input type="radio" name="priority" value="2">
+                            </div>
+                            <div class="main-priority-box">
+                                <i class="iconfont icon-gantanhao  third-priority"></i>
+                                <input type="radio" name="priority" value="3" checked>
+                            </div>
+                            
+                        </div>
+                        <div class="main-timer">
+                            <span>执行时长：</span>
+                            <input type="text" id="todo-timer">
+                            <span>小时</span>
+                        </div>
+                        <div class="main-create">
+                            <span>创建待办</span>
+                        </div>
                     </div>
+                </div>
+                <div class="todo-item">
+                    <!-- TODO: 创建待办项 -->
                 </div>
             </div>
             <div class="main-box" id="competition"></div>
