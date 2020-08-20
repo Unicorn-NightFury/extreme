@@ -21,6 +21,10 @@ axios.interceptors.request.use(
     axios.get('/api/user/item')
     .then(res => {
         // TODO: 渲染 todo item
+        console.log(res.data);
+        res.data.forEach((item, index) => {
+            createToDoItem(item.priority, item.todo, item.timer);
+        })
     });
 })();
 
