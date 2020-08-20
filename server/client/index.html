@@ -23,7 +23,7 @@
             },
             err => Promise.reject(err)
         );
-        axios.get('/api/user')
+        axios.get('/api/redirect')
         .then(res => {
             console.log(res.data)
             window.location.href = res.data;

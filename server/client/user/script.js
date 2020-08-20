@@ -15,6 +15,16 @@ axios.interceptors.request.use(
 );
 
 
+
+(function() {
+    console.log('axios ok')
+    axios.get('/api/user/item')
+    .then(res => {
+        // TODO: 渲染 todo item
+    });
+})();
+
+
 /**
  * @description global value
  */
@@ -64,6 +74,7 @@ function showTodoTable() {
 function hideTodoTable() {
     $('#todo #todo-table').attr('class', 'todo-table-hide');
     clearData();
+    $("#shadow-box").fadeOut();
 }
 
 function clearData() {
@@ -92,19 +103,33 @@ function postToDoData() {
         })
         .then(res => {
             console.log(res.data)
+            createToDoItem(priority, todo, timer)
         })
     }
 }
 
-function createToDoItem() {
-
+function createToDoItem(priority, todo, timer) {
+    const el = `
+    <div class="todo-item">
+        <div class="item-priority item-color${priority}">
+            <!-- priority color -->
+        </div>
+        <div class="item-content">
+            <div class="item-text"><span>${todo}</span></div>
+            <div class="item-timer">限时: ${timer}h</div>
+        </div>
+        <div class="item-button item-color${priority}"><span>
+            开始
+        </span></div>
+    </div>
+    `
+    $("#todo").append(el);
 }
 
 function createToDo() {
     postToDoData();
     clearData();
     hideTodoTable();
-
 }
 
 // trigger parts

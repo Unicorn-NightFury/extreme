@@ -3,14 +3,7 @@ var router = express.Router();
 const { createToken } = require('../jwt')
 const { User, Todo } = require('../mongo')
 
-router.get('/user', (req, res) => {
-    console.log(req.user)
-    if (req.user !== undefined) {
-        res.send('/user')
-    } else {
-        res.send('/login')
-    }
-})
+
 
 router.post('/user/todo', (req, res) => {
     const {username} = req.user;
@@ -28,6 +21,30 @@ router.post('/user/todo', (req, res) => {
             res.send('ok')
         }
     })
+})
+
+router.get('/user/item', (req, res) => {
+    const { username } = req.user;
+    console.log(username);
+    Todo.find({
+        username
+    }, (err, data) => {
+        if (err) {
+            console.log(err)
+        } else {
+            res.send(data)
+        }
+    });
+    
+}) 
+
+
+router.get('/redirect', (req, res) => {
+    if (req.user !== undefined) {
+        res.send('/user')
+    } else {
+        res.send('/login')
+    }
 })
 
 router.post('/login', (req, res) => {

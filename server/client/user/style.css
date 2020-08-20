@@ -275,7 +275,7 @@ html, body {
     color: red;
 }
 .second-priority {
-    color: yellow;
+    color: orange;
 }
 .third-priority {
     color: #31c27c;
@@ -309,6 +309,73 @@ html, body {
     font-size: 0.65rem;
     line-height: 1.75rem;
     border-radius: 0.25rem;
+}
+
+.todo-item {
+    position: relative;
+    height: 2.5rem;
+    width: 90%;
+    /* border: 0.025rem solid #ccc; */
+    margin: 20px auto;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+}
+
+.item-priority {
+    position: relative;
+    height: 100%;
+    width: 7%;
+    float: left;
+}
+
+.item-content {
+    height: 100%;
+    width: 75%;
+    /* background-color: pink; */
+    border: none;
+    float: left;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0px 0.5rem;
+}
+.item-text {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #555;
+}
+.item-timer {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 0.4rem;
+    color: #ccc;
+}
+
+.item-button {
+    height: 100%;
+    width: 18%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.75rem;
+}
+
+.item-color3 {
+    background-color: #31c27c !important;
+}
+.item-color2 {
+    background-color: orange !important;
+}
+.item-color1 {
+    background-color: red !important;
 }
 
 
